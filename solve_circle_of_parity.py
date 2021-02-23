@@ -102,10 +102,8 @@ if __name__ == '__main__':
 	if len(beaten_teams) < nteams:
 		print('Not every team lost in ' + str(year) + ' so the circle of parity cannot exist.')
 		sys.exit()
-		# continue
 
 	# Similarly, if every team does not win a game a circle of parity cannot be found
-	# winlessteam = False
 	team_to_num = {}
 	for tm in range(nteams):
 		tm_name = list(nfl_graph.keys())[tm]
@@ -114,10 +112,6 @@ if __name__ == '__main__':
 		if len(nfl_graph[tm_name]) == 0:
 			print('The ' + tm_name + ' were winless in ' + str(year) + ' so the circle of parity cannot exist.')
 			sys.exit()
-	# 		winlessteam = True
-	# 		continue
-	# if winlessteam:
-	# 	continue
 
 	num_to_team = {v: k for k, v in team_to_num.items()}
 
